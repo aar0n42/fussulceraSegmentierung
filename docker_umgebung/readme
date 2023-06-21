@@ -1,0 +1,8 @@
+1. Ulcera Bilder in Ordner "images" packen. 2 Bilder sind für ein Beispiel bereits im Ordner.
+
+2. Container bauen: docker build -t projektarbeit .
+
+3. Vorher <path> angeben, wo die Bilder gespeichert werden sollen: docker run -v "<path>:/predictions" projektarbeit python inference.py
+
+z.B. docker run -v "$(pwd)/predictions:/predictions" my python inference.py
+Bilder werden dann unter dem Ordner "predictions" im aktuellen Verzeichnis abgelegt.
